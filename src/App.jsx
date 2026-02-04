@@ -1,7 +1,12 @@
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 export default function App() {
   return (
     <>
-      <h1>DC Comics</h1>
+      <Header></Header>
+      <Main></Main>
+      <Footer></Footer>
     </>
   );
 }
