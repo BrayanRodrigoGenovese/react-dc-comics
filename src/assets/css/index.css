@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  font-variation-settings: "wdth" 100;
+}
+
+.condensed-text {
+  font-variation-settings: "wdth" 65;
+}
+#about-us {
+  background-image: url("/footer-bg.jpg");
+  overflow: hidden;
+  height: 27rem;
+}
+
+#usefull-info {
+  background-color: rgb(8, 130, 249);
+}
+
+#follow-us {
+  background-color: rgb(48, 48, 48);
+  color: rgb(8, 130, 249);
+}
+
+#sign-up-button {
+  color: white;
+  background: none;
+  border-style: solid;
+  border-color: rgb(8, 130, 249);
+  padding: 10pt;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#dc-logo-bg {
+  transform: translateY(-65px);
+  width: auto;
+}
