@@ -1,3 +1,16 @@
+const menu = [
+  "CHARACTERS",
+  "COMICS",
+  "MOVIES",
+  "TV",
+  "GAMES",
+  "COLLECTIBLES",
+  "VIDEOS",
+  "FANS",
+  "NEWS",
+  "SHOP",
+];
+
 export default function Header() {
   return (
     <>
@@ -5,86 +18,16 @@ export default function Header() {
         <header className="d-flex flex-wrap justify-content-center align-items-center py-4">
           <img src="/dc-logo.png" className="me-auto" alt="" />
           <ul className="nav">
-            <li>
-              <a
-                href="#"
-                className="nav-link px-2 fw-bold text-secondary condensed-text"
-              >
-                CHARACTERS
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="nav-link px-2 fw-bold text-secondary condensed-text"
-              >
-                COMICS
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="nav-link px-2 fw-bold text-secondary condensed-text"
-              >
-                MOVIES
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="nav-link px-2 fw-bold text-secondary condensed-text"
-              >
-                TV
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="nav-link px-2 fw-bold text-secondary condensed-text"
-              >
-                GAMES
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="nav-link px-2 fw-bold text-secondary condensed-text"
-              >
-                COLLECTIBLES
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="nav-link px-2 fw-bold text-secondary condensed-text"
-              >
-                VIDEOS
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="nav-link px-2 fw-bold text-secondary condensed-text"
-              >
-                FANS
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="nav-link px-2 fw-bold text-secondary condensed-text"
-              >
-                NEWS
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="nav-link px-2 fw-bold text-secondary condensed-text"
-              >
-                SHOP
-              </a>
-            </li>
+            {menu.map((navItem) => (
+              <li className="px-1">
+                <a
+                  href="#"
+                  className="nav-link fw-bold text-secondary condensed-text"
+                >
+                  {navItem}
+                </a>
+              </li>
+            ))}
           </ul>
         </header>
       </div>

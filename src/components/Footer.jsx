@@ -1,71 +1,66 @@
+// MENUS
+// DC COMICS
+const DCCOMICS = {
+  title: "DC COMICS",
+  navItems: ["Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"],
+};
+
+const DC = {
+  title: "DC",
+  navItems: [
+    "Terms Of Use",
+    "Privacy policy(New)",
+    "Ad Choices",
+    "Advertising",
+    "Jobs",
+    "Subscriptions",
+    "Talents Workshops",
+    "CPSC Certificates",
+    "Ratings",
+    "Shop Help",
+    "Contact Us",
+  ],
+};
+
+const SHOP = {
+  title: "SHOP",
+  navItems: ["Shop DC", "Shop DC Collectibles"],
+};
+
+const SITES = {
+  title: "SITES",
+  navItems: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"],
+};
+
+const socialIcons = [
+  "/footer-facebook.png",
+  "/footer-twitter.png",
+  "/footer-youtube.png",
+  "/footer-pinterest.png",
+  "/footer-periscope.png",
+];
+
+function FooterMenu(title, navItems) {
+  return (
+    <>
+      <h2 className="fw-bold text-white condensed-text">{title}</h2>
+      <ul className="nav flex-column">
+        {navItems.map((navItem) => (
+          <li className="nav-item text-secondary">
+            <a href="#" className="nav-link p-0 text-secondary">
+              {navItem}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
 export default function Footer() {
   return (
     <>
       <footer>
-        <div id="usefull-info">
-          <div className="container">
-            <div className="row py-5">
-              <ul className="nav justify-content-center align-items-center">
-                <li className="nav-item text-white px-3">
-                  <a href="#" className="nav-link text-white">
-                    <img
-                      src="/buy-comics-digital-comics.png"
-                      className="pe-2"
-                      height={60}
-                      alt=""
-                    />
-                    DIGITAL COMICS
-                  </a>
-                </li>
-                <li className="nav-item text-white px-3">
-                  <a href="#" className="nav-link text-white">
-                    <img
-                      src="/buy-comics-merchandise.png"
-                      className="pe-2"
-                      height={60}
-                      alt=""
-                    />
-                    DC MERCHANDISE
-                  </a>
-                </li>
-                <li className="nav-item text-white px-3">
-                  <a href="#" className="nav-link text-white">
-                    <img
-                      src="/buy-comics-subscriptions.png"
-                      className="pe-2"
-                      height={60}
-                      alt=""
-                    />
-                    SUBSCRIPTION
-                  </a>
-                </li>
-                <li className="nav-item text-white px-3">
-                  <a href="#" className="nav-link text-white">
-                    <img
-                      src="/buy-comics-shop-locator.png"
-                      className="pe-2"
-                      height={60}
-                      alt=""
-                    />
-                    COMIC SHOP LOCATOR
-                  </a>
-                </li>
-                <li className="nav-item text-white px-3">
-                  <a href="#" className="nav-link text-white">
-                    <img
-                      src="/buy-dc-power-visa.svg"
-                      className="pe-2"
-                      width={70}
-                      alt=""
-                    />
-                    DC POWER VISA
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         <div id="about-us">
           <div className="container">
             <div className="row">
@@ -74,158 +69,18 @@ export default function Footer() {
                   {/* Double Column */}
                   <div className="flex-column col-4">
                     {/* DC COMICS */}
-                    <div className="pb-3">
-                      <h2 className="fw-bold text-white condensed-text">
-                        DC COMICS
-                      </h2>
-                      <ul className="nav flex-column">
-                        <li className="nav-item text-secondary">
-                          <a href="#" className="nav-link p-0 text-secondary">
-                            Characters
-                          </a>
-                        </li>
-                        <li className="nav-item text-secondary">
-                          <a href="#" className="nav-link p-0 text-secondary">
-                            Comics
-                          </a>
-                        </li>
-                        <li className="nav-item text-secondary">
-                          <a href="#" className="nav-link p-0 text-secondary">
-                            Movies
-                          </a>
-                        </li>
-                        <li className="nav-item text-secondary">
-                          <a href="#" className="nav-link p-0 text-secondary">
-                            TV
-                          </a>
-                        </li>
-                        <li className="nav-item text-secondary">
-                          <a href="#" className="nav-link p-0 text-secondary">
-                            Games
-                          </a>
-                        </li>
-                        <li className="nav-item text-secondary">
-                          <a href="#" className="nav-link p-0 text-secondary">
-                            Videos
-                          </a>
-                        </li>
-                        <li className="nav-item text-secondary">
-                          <a href="#" className="nav-link p-0 text-secondary">
-                            News
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                    {FooterMenu(DCCOMICS.title, DCCOMICS.navItems)}
+                    <div className="my-3"></div>
                     {/* SHOP */}
-                    <div>
-                      <h2 className="fw-bold text-white condensed-text">
-                        SHOP
-                      </h2>
-                      <ul className="nav flex-column">
-                        <li className="nav-item text-secondary">
-                          <a href="#" className="nav-link p-0 text-secondary">
-                            Shop DC
-                          </a>
-                        </li>
-                        <li className="nav-item text-secondary">
-                          <a href="#" className="nav-link p-0 text-secondary">
-                            Shop DC Collectibles
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+                    {FooterMenu(SHOP.title, SHOP.navItems)}
                   </div>
                   {/* DC */}
                   <div className="col-4">
-                    <h2 className="fw-bold text-white condensed-text">DC</h2>
-                    <ul className="nav flex-column">
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          Terms Of Use
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          Privacy policy (New)
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          Ad Choices
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          Advertising
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          Jobs
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          Subscriptions
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          Talents Workshops
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          CPSC Certificates
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          Ratings
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          Shop Help
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          Contact Us
-                        </a>
-                      </li>
-                    </ul>
+                    {FooterMenu(DC.title, DC.navItems)}
                   </div>
                   {/* SITES */}
                   <div className="col-4">
-                    <h2 className="fw-bold text-white condensed-text">SITES</h2>
-                    <ul className="nav flex-column">
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          DC
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          MAD Magazine
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          DC Kids
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          DC Universe
-                        </a>
-                      </li>
-                      <li className="nav-item text-secondary">
-                        <a href="#" className="nav-link p-0 text-secondary">
-                          DC Power Visa
-                        </a>
-                      </li>
-                    </ul>
+                    {FooterMenu(SITES.title, SITES.navItems)}
                   </div>
                 </div>
               </div>
@@ -234,7 +89,7 @@ export default function Footer() {
                   src="/dc-logo-bg.png"
                   className="img-fluid"
                   id="dc-logo-bg"
-                  alt=""
+                  alt="dc logo"
                 />
               </div>
             </div>
@@ -250,21 +105,13 @@ export default function Footer() {
               <div className="d-flex flex-wrap">
                 <h2 className="fw-bold condensed-text me-3">FOLLOW US</h2>
                 <ul className="nav">
-                  <li className="nav-item px-2">
-                    <img src="/footer-facebook.png" alt="" />
-                  </li>
-                  <li className="nav-item px-2">
-                    <img src="/footer-twitter.png" alt="" />
-                  </li>
-                  <li className="nav-item px-2">
-                    <img src="/footer-youtube.png" alt="" />
-                  </li>
-                  <li className="nav-item px-2">
-                    <img src="/footer-pinterest.png" alt="" />
-                  </li>
-                  <li className="nav-item px-2">
-                    <img src="/footer-periscope.png" alt="" />
-                  </li>
+                  {socialIcons.map((iconPath) => (
+                    <li className="nav-item px-2">
+                      <a href="#">
+                        <img src={iconPath} alt="" />
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
